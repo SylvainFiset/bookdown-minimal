@@ -12,4 +12,12 @@ output:
 
 Bonjour
 
-<!-- If you need PDF output, uncomment bookdown::pdf_book above in YAML. You will need a LaTeX installation, e.g., https://yihui.name/tinytex/ -->
+```{r}
+library(tidyverse)
+d <- rnorm(100, 0, 2)
+d %>% 
+  as.tibble(d) %>%
+  ggplot(aes(x = d)) +
+  geom_histogram(color="white", fill="grey40")
+```
+
